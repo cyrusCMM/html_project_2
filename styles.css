@@ -1,334 +1,500 @@
-/* =====================================================
+/* ==========================================================
+   CYRUS KITCHEN
+   Custom CSS
+========================================================== */
+
+
+/* ==========================================================
    GOOGLE FONT
-===================================================== */
+========================================================== */
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 
-/* =====================================================
-   RESET
-===================================================== */
+
+/* ==========================================================
+   GLOBAL STYLES
+========================================================== */
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* =====================================================
-   BODY
-===================================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
 
 body {
-  font-family: "Roboto", sans-serif;
-  background-color: #fffaf4;
-  color: #333;
-  line-height: 1.6;
+    font-family: "Roboto", sans-serif;
+    color: #333333;
+    background-color: #ffffff;
 }
 
-/* =====================================================
-   MAIN WRAPPER
-===================================================== */
 
-.main-wrapper {
-  width: 100%;
+/*
+   Because our navbar is fixed, this prevents sections
+   from disappearing underneath it when navigation links
+   are clicked.
+*/
+section {
+    scroll-margin-top: 70px;
 }
 
-/* =====================================================
+
+/* ==========================================================
    NAVBAR
-===================================================== */
+========================================================== */
 
 .navbar {
-  background-color: #5c2c06;
-  padding: 15px 30px;
+    padding: 15px 0;
 
-  display: flex;
-  align-items: center;
-  gap: 20px;
-
-  position: sticky;
-  top: 0;
-
-  z-index: 1000;
+    box-shadow:
+        0 2px 12px rgba(0, 0, 0, 0.18);
 }
 
-/* =====================================================
-   LOGO
-===================================================== */
 
-.logo {
-  color: white;
-  text-decoration: none;
-
-  font-size: 1.5rem;
-  font-weight: 700;
-
-  margin-right: auto;
+.navbar-brand {
+    font-size: 1.6rem;
+    font-weight: 700;
 }
 
-/* =====================================================
-   NAVIGATION LINKS
-===================================================== */
 
-.nav-link {
-  display: inline-block;
+.navbar .nav-link {
+    color: #ffffff;
 
-  color: white;
+    font-weight: 500;
 
-  text-decoration: none;
+    margin-left: 15px;
 
-  padding: 8px 12px;
-
-  font-weight: 500;
-
-  transition: 0.3s ease;
+    transition: color 0.3s ease;
 }
 
-/* NAVIGATION HOVER */
 
-.nav-link:hover {
-  color: #ffd27f;
+.navbar .nav-link:hover {
+    color: #ffc107;
 }
 
-/* =====================================================
+
+.navbar .nav-link.active {
+    color: #ffc107;
+}
+
+
+/* ==========================================================
    HERO SECTION
-===================================================== */
+========================================================== */
 
-.hero {
-  position: relative;
+.hero-section {
 
-  width: 100%;
+    min-height: 100vh;
+
+    /*
+       hero.png is directly beside index.html and styles.css
+    */
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.55)
+        ),
+        url("hero.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    padding: 100px 20px 60px;
 }
 
-/* =====================================================
-   HERO IMAGE
-===================================================== */
 
-.hero-image {
-  width: 100%;
-  height: 450px;
-
-  object-fit: cover;
-
-  display: block;
+.hero-section h1 {
+    text-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.6);
 }
 
-/* =====================================================
-   HERO TITLE
-===================================================== */
 
-.hero-title {
-  position: absolute;
+.hero-section p {
+    max-width: 750px;
 
-  top: 50%;
-  left: 50%;
+    margin-left: auto;
+    margin-right: auto;
 
-  transform: translate(-50%, -50%);
+    font-size: 1.25rem;
 
-  text-align: center;
-
-  color: white;
-
-  background-color: rgba(0, 0, 0, 0.5);
-
-  padding: 25px 40px;
-
-  border-radius: 12px;
+    line-height: 1.7;
 }
 
-.hero-title h1 {
-  font-size: 3rem;
 
-  margin-bottom: 10px;
+.hero-section .btn {
+    border-radius: 30px;
+
+    font-weight: 700;
+
+    padding: 12px 35px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
-.hero-title p {
-  font-size: 1.2rem;
+
+.hero-section .btn:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
-/* =====================================================
-   MENU CONTAINER
-===================================================== */
 
-.menu-container {
-  max-width: 1200px;
-
-  margin: 0 auto;
-
-  padding: 50px 20px;
-}
-
-/* =====================================================
-   MENU SECTIONS
-===================================================== */
-
-.menu-section {
-  margin-bottom: 50px;
-}
-
-/* =====================================================
+/* ==========================================================
    SECTION TITLES
-===================================================== */
+========================================================== */
 
-.section-title {
-  font-size: 2rem;
-
-  color: #5c2c06;
-
-  margin-bottom: 20px;
-
-  padding-bottom: 10px;
-
-  border-bottom: 3px solid #e3a857;
+section h2 {
+    color: #6b3200;
 }
 
-/* =====================================================
-   MENU LIST
-===================================================== */
 
-.menu-list {
-  list-style: none;
-
-  display: grid;
-
-  grid-template-columns: repeat(3, 1fr);
-
-  gap: 20px;
+section p {
+    line-height: 1.7;
 }
 
-/* =====================================================
-   MENU ITEMS
-===================================================== */
 
-.menu-item {
-  background-color: white;
+/* ==========================================================
+   MENU SECTION
+========================================================== */
 
-  padding: 20px;
-
-  border-radius: 10px;
-
-  border: 1px solid #ead8c4;
-
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-
-  transition: 0.3s ease;
+#menu {
+    background-color: #f8f9fa;
 }
 
-/* MENU ITEM HOVER */
 
-.menu-item:hover {
-  transform: translateY(-5px);
+#menu .card {
 
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
-/* =====================================================
-   DISH NAME
-===================================================== */
 
-.dish-name {
-  display: block;
+#menu .card:hover {
 
-  color: #8b4513;
+    transform: translateY(-8px);
 
-  font-size: 1.2rem;
-
-  margin-bottom: 8px;
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.16) !important;
 }
 
-/* =====================================================
-   DISH DESCRIPTION
-===================================================== */
 
-.dish-description {
-  color: #555;
+/* All three menu pictures have the same dimensions */
 
-  font-size: 0.95rem;
-}
+.menu-image {
 
-/* =====================================================
-   FOOTER
-===================================================== */
-
-.footer {
-  background-color: #5c2c06;
-
-  text-align: center;
-
-  padding: 25px;
-}
-
-/* =====================================================
-   CONTACT LINK
-===================================================== */
-
-.contact-link {
-  color: white;
-
-  text-decoration: none;
-
-  font-weight: 500;
-
-  padding: 10px 20px;
-
-  border: 2px solid white;
-
-  border-radius: 6px;
-
-  display: inline-block;
-
-  transition: 0.3s ease;
-}
-
-/* CONTACT HOVER */
-
-.contact-link:hover {
-  background-color: white;
-
-  color: #5c2c06;
-}
-
-/* =====================================================
-   RESPONSIVE DESIGN
-===================================================== */
-
-@media (max-width: 900px) {
-  .menu-list {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 700px) {
-  /* NAVBAR */
-
-  .navbar {
-    flex-wrap: wrap;
-
-    gap: 10px;
-  }
-
-  .logo {
     width: 100%;
 
-    margin-bottom: 10px;
-  }
+    height: 280px;
 
-  /* HERO */
+    object-fit: cover;
+}
 
-  .hero-image {
-    height: 350px;
-  }
 
-  .hero-title h1 {
-    font-size: 2rem;
-  }
+.card-body {
+    padding: 25px;
+}
 
-  .hero-title p {
+
+.card-title {
+
+    color: #6b3200;
+
+    font-size: 1.6rem;
+
+    font-weight: 700;
+}
+
+
+.card-text {
+
+    color: #555555;
+
     font-size: 1rem;
-  }
+}
 
-  /* MENU */
 
-  .menu-list {
-    grid-template-columns: 1fr;
-  }
+.card-footer {
+
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+
+.badge {
+
+    border-radius: 25px;
+
+    padding: 10px 16px;
+}
+
+
+/* ==========================================================
+   ABOUT SECTION
+========================================================== */
+
+#about {
+    background-color: #ffffff;
+}
+
+
+.about-image {
+
+    width: 100%;
+
+    height: 500px;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+}
+
+
+#about p {
+    color: #555555;
+}
+
+
+#about .btn {
+
+    padding: 11px 28px;
+
+    border-radius: 25px;
+}
+
+
+/* ==========================================================
+   CONTACT SECTION
+========================================================== */
+
+#contact {
+    background-color: #f8f4ef;
+}
+
+
+#contact form {
+
+    border-radius: 20px;
+}
+
+
+.form-label {
+
+    font-weight: 500;
+
+    color: #333333;
+}
+
+
+.form-control {
+
+    padding: 13px 15px;
+
+    border-radius: 10px;
+
+    border: 1px solid #cccccc;
+}
+
+
+.form-control:focus {
+
+    border-color: #ffc107;
+
+    box-shadow:
+        0 0 0 0.2rem rgba(255, 193, 7, 0.25);
+}
+
+
+#contact textarea {
+
+    resize: vertical;
+}
+
+
+#contact button {
+
+    padding: 13px;
+
+    border-radius: 10px;
+
+    font-weight: 700;
+}
+
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+footer {
+
+    border-top: 4px solid #ffc107;
+}
+
+
+footer p {
+
+    font-size: 0.95rem;
+}
+
+
+.social-links a {
+
+    display: inline-block;
+
+    font-size: 1.4rem;
+
+    text-decoration: none;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.social-links a:hover {
+
+    color: #ffc107 !important;
+
+    transform: translateY(-3px);
+}
+
+
+/* ==========================================================
+   TABLET RESPONSIVENESS
+========================================================== */
+
+@media (max-width: 992px) {
+
+    .hero-section {
+
+        min-height: 80vh;
+    }
+
+
+    .hero-section h1 {
+
+        font-size: 3rem;
+    }
+
+
+    .menu-image {
+
+        height: 250px;
+    }
+
+
+    .about-image {
+
+        height: 420px;
+    }
+
+}
+
+
+/* ==========================================================
+   MOBILE RESPONSIVENESS
+========================================================== */
+
+@media (max-width: 768px) {
+
+    .navbar .nav-link {
+
+        margin-left: 0;
+
+        padding: 10px 0;
+    }
+
+
+    .hero-section {
+
+        min-height: 75vh;
+
+        padding-top: 120px;
+    }
+
+
+    .hero-section h1 {
+
+        font-size: 2.5rem;
+    }
+
+
+    .hero-section p {
+
+        font-size: 1rem;
+    }
+
+
+    .menu-image {
+
+        height: 260px;
+    }
+
+
+    .about-image {
+
+        height: 350px;
+    }
+
+}
+
+
+/* ==========================================================
+   SMALL PHONES
+========================================================== */
+
+@media (max-width: 576px) {
+
+    .hero-section {
+
+        min-height: 70vh;
+    }
+
+
+    .hero-section h1 {
+
+        font-size: 2rem;
+    }
+
+
+    .hero-section .btn {
+
+        width: 100%;
+    }
+
+
+    .menu-image {
+
+        height: 230px;
+    }
+
+
+    .about-image {
+
+        height: 300px;
+    }
+
+
+    footer {
+
+        text-align: center;
+    }
+
 }
