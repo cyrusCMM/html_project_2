@@ -1,103 +1,170 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cyrus Kitchen Menu</title>
-</head>
 
-<body>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
+  <body>
     <!-- =========================
-         RESTAURANT IMAGE
+         MAIN WRAPPER
     ========================== -->
-    <img src="menu.png"
-         alt="Cyrus Kitchen Restaurant Menu"
-         width="100%">
+    <div class="main-wrapper">
+      <!-- =========================
+             NAVBAR
+        ========================== -->
+      <nav class="navbar">
+        <a href="#" class="logo"> Cyrus Kitchen </a>
 
-    <!-- =========================
-         MAIN HEADING
-    ========================== -->
-    <h1>Cyrus Kitchen Menu</h1>
+        <a href="#appetizers" class="nav-link"> Appetizers </a>
 
-    <p>
-        Welcome to Cyrus Kitchen. Enjoy our delicious selection of meals.
-    </p>
+        <a href="#main-courses" class="nav-link"> Main Courses </a>
 
-    <!-- =========================
-         APPETIZERS
-    ========================== -->
-    <h2>Appetizers</h2>
+        <a href="#desserts" class="nav-link"> Desserts </a>
 
-    <ul>
-        <li>
-            <strong>Chicken Wings</strong>
-            <p>Spicy grilled chicken wings served with a fresh dipping sauce.</p>
-        </li>
+        <a href="contact.html" class="nav-link"> Contact </a>
+      </nav>
 
-        <li>
-            <strong>Vegetable Samosas</strong>
-            <p>Crispy samosas filled with seasoned vegetables.</p>
-        </li>
+      <!-- =========================
+             HERO IMAGE
+        ========================== -->
+      <header class="hero">
+        <img
+          src="menu.png"
+          alt="Cyrus Kitchen Restaurant Menu"
+          class="hero-image"
+        />
 
-        <li>
-            <strong>Fresh Garden Salad</strong>
-            <p>Fresh lettuce, tomatoes, cucumber and onions served with dressing.</p>
-        </li>
-    </ul>
+        <div class="hero-title">
+          <h1>Cyrus Kitchen Menu</h1>
 
-    <!-- =========================
-         MAIN COURSES
-    ========================== -->
-    <h2>Main Courses</h2>
+          <p>
+            Welcome to Cyrus Kitchen. Enjoy our delicious selection of meals.
+          </p>
+        </div>
+      </header>
 
-    <ul>
-        <li>
-            <strong>Grilled Tilapia</strong>
-            <p>Fresh grilled tilapia served with ugali and vegetables.</p>
-        </li>
+      <!-- =========================
+             MENU CONTENT
+        ========================== -->
+      <main class="menu-container">
+        <!-- =====================
+                 APPETIZERS
+            ====================== -->
+        <section id="appetizers" class="menu-section">
+          <h2 class="section-title">Appetizers</h2>
 
-        <li>
-            <strong>Beef Pilau</strong>
-            <p>Fragrant spiced rice cooked with tender pieces of beef.</p>
-        </li>
+          <ul class="menu-list">
+            <li class="menu-item">
+              <strong class="dish-name"> Chicken Wings </strong>
 
-        <li>
-            <strong>Chicken Curry</strong>
-            <p>Tender chicken cooked in a rich curry sauce and served with rice.</p>
-        </li>
-    </ul>
+              <p class="dish-description">
+                Spicy grilled chicken wings served with a fresh dipping sauce.
+              </p>
+            </li>
 
-    <!-- =========================
-         DESSERTS
-    ========================== -->
-    <h2>Desserts</h2>
+            <li class="menu-item">
+              <strong class="dish-name"> Vegetable Samosas </strong>
 
-    <ul>
-        <li>
-            <strong>Chocolate Cake</strong>
-            <p>Rich chocolate cake served with a creamy chocolate topping.</p>
-        </li>
+              <p class="dish-description">
+                Crispy samosas filled with seasoned vegetables.
+              </p>
+            </li>
 
-        <li>
-            <strong>Fruit Salad</strong>
-            <p>A refreshing selection of seasonal fresh fruits.</p>
-        </li>
+            <li class="menu-item">
+              <strong class="dish-name"> Fresh Garden Salad </strong>
 
-        <li>
-            <strong>Vanilla Ice Cream</strong>
-            <p>Creamy vanilla ice cream served with chocolate sauce.</p>
-        </li>
-    </ul>
+              <p class="dish-description">
+                Fresh lettuce, tomatoes, cucumber and onions served with
+                dressing.
+              </p>
+            </li>
+          </ul>
+        </section>
 
-    <!-- =========================
-         CONTACT LINK
-    ========================== -->
-    <p>
-        <a href="contact.html">Contact us for reservations</a>
-    </p>
+        <!-- =====================
+                 MAIN COURSES
+            ====================== -->
+        <section id="main-courses" class="menu-section">
+          <h2 class="section-title">Main Courses</h2>
 
-</body>
+          <ul class="menu-list">
+            <li class="menu-item">
+              <strong class="dish-name"> Grilled Tilapia </strong>
 
+              <p class="dish-description">
+                Fresh grilled tilapia served with ugali and vegetables.
+              </p>
+            </li>
+
+            <li class="menu-item">
+              <strong class="dish-name"> Beef Pilau </strong>
+
+              <p class="dish-description">
+                Fragrant spiced rice cooked with tender pieces of beef.
+              </p>
+            </li>
+
+            <li class="menu-item">
+              <strong class="dish-name"> Chicken Curry </strong>
+
+              <p class="dish-description">
+                Tender chicken cooked in a rich curry sauce and served with
+                rice.
+              </p>
+            </li>
+          </ul>
+        </section>
+
+        <!-- =====================
+                 DESSERTS
+            ====================== -->
+        <section id="desserts" class="menu-section">
+          <h2 class="section-title">Desserts</h2>
+
+          <ul class="menu-list">
+            <li class="menu-item">
+              <strong class="dish-name"> Chocolate Cake </strong>
+
+              <p class="dish-description">
+                Rich chocolate cake served with a creamy chocolate topping.
+              </p>
+            </li>
+
+            <li class="menu-item">
+              <strong class="dish-name"> Fruit Salad </strong>
+
+              <p class="dish-description">
+                A refreshing selection of seasonal fresh fruits.
+              </p>
+            </li>
+
+            <li class="menu-item">
+              <strong class="dish-name"> Vanilla Ice Cream </strong>
+
+              <p class="dish-description">
+                Creamy vanilla ice cream served with chocolate sauce.
+              </p>
+            </li>
+          </ul>
+        </section>
+      </main>
+
+      <!-- =========================
+             CONTACT
+        ========================== -->
+      <footer class="footer">
+        <p>
+          <a href="contact.html" class="contact-link">
+            Contact us for reservations
+          </a>
+        </p>
+      </footer>
+    </div>
+  </body>
 </html>
